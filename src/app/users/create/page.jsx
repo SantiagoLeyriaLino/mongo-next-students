@@ -23,7 +23,7 @@ export default function CreateStudent(){
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:3000/api/student', newStudent)
+        axios.post('https://mongo-next-students.vercel.app/api/student', newStudent)
         .then((response)=>{
             console.log(response.data)
             setNewStudent({name:"",age:0})

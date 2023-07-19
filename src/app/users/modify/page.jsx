@@ -10,7 +10,7 @@ export default function Users(){
     const [allStudents, setAllStudents] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:3000/api/student')
+        axios.get('https://mongo-next-students.vercel.app/api/student')
         .then(response=>{
             console.log(response.data.data)
             setAllStudents(response.data.data)

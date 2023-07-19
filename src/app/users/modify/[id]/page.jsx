@@ -28,7 +28,7 @@ export default function CreateStudent(){
     },[newStudent])
 
     useEffect(()=>{
-        axios.get(`http://localhost:3000/api/student/${idPath}`)
+        axios.get(`https://mongo-next-students.vercel.app/api/student/${idPath}`)
         .then((response)=>{
             setStudent(response.data)
         })
@@ -43,7 +43,7 @@ export default function CreateStudent(){
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios.put(`http://localhost:3000/api/student/${idPath}`, newStudent)
+        axios.put(`https://mongo-next-students.vercel.app/api/student/${idPath}`, newStudent)
         .then((response)=>{
             console.log(response.data)
             setNewStudent({name:"",age:null})
